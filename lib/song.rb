@@ -30,10 +30,12 @@ class Song
   
   def self.genre_count
     number_of_genres = @@genres.group_by{ |v| v }.map{ |k, v| [k, v.size] }.to_h
+    number_of_genres
   end 
   
   def self.artist_count
-    
+    number_of_artists = @@artists.group_by{ |v| v }.map{ |k, v| [k, v.size] }.to_h
+    number_of_artists
   end 
 end
 
